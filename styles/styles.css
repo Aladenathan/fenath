@@ -1,0 +1,461 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Alice Blue as background */
+    color: #003060; /* Dark blue for text */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #003060 !important; /* Dark blue */
+
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #f0f8ff !important; /* Alice Blue for text */
+}
+
+.navbar-nav .nav-link {
+    color: #f0f8ff !important; /* Alice Blue for links */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #68bbe3 !important; /* Light blue for hover */
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 100px 0;
+    background-color: #055c9d; /* Medium blue */
+    color: #f0f8ff; /* Alice Blue for text */
+}
+
+.phone-image {
+    background: url('../images/phone-portrait.png') no-repeat center center/cover;
+    height: 500px;
+    border-radius: 20px;
+}
+
+/* Featured Section Styles */
+#featured {
+   
+    padding: 60px 0;
+    color: #0e86da;; /* Alice Blue for text */
+}
+
+#featured h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#featured .lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+/* Branding Services Section */
+.service-card, .software-card {
+    background-color: #68bbe3; /* Light blue */
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    color: #003060; /* Dark blue for text */
+}
+
+.service-card:hover, .software-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+#branding-services, #management-software {
+    background-color: #055c9d; /* Medium blue */
+    margin: 20px;
+    border-radius: 2%;
+    padding: 20px;
+    color: #f0f8ff; /* Alice Blue for text */
+}
+
+#management-software {
+    background-color: #055c9d; /* Medium blue */
+    margin: 10px;
+    border-radius: 2%;
+    padding: 20px;
+    color: #f0f8ff; /* Alice Blue for text */
+}
+
+#image-slideshow {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+/* Image Grid Section */
+.image-grid-section img {
+    border-radius: 10px;
+}
+
+/* Contact Form Section */
+.social-icons a {
+    color: #003060; /* Dark blue */
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0e86da; /* Bright blue for hover */
+}
+
+.cap-head, .cap-text{
+    background-color: #f0f8ff;
+    color: #003060; /* Dark blue */
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    /* Hero Section */
+    .service-card, .software-card {
+        margin: 10px 0;
+    }
+
+    #featured h1 {
+        font-size: 2rem; /* Smaller heading on mobile */
+    }
+
+    #featured .lead {
+        font-size: 1rem; /* Smaller text on mobile */
+    }
+}
+
+
+/* Loading Spinner */
+.spinner-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top of everything */
+}
+
+.spinner {
+    border: 8px solid #f0f8ff; /* Light blue border */
+    border-top: 8px solid #0e86da; /* Bright blue border */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite; /* Spin animation */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+/* Portfolio Section Styles */
+#portfolio {
+    padding-top: 100px; /* Adjust for fixed navbar */
+    background-color: #f0f8ff; /* Alice Blue */
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 48, 96, 0.8); /* Dark blue with transparency */
+    color: #f0f8ff; /* Alice Blue for text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #003060; /* Dark blue */
+    color: #f0f8ff; /* Alice Blue for text */
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+/* About Hero Section */
+.about-hero-section {
+    background: url('../images/about-hero1.jpeg') no-repeat center center/cover;
+    padding: 150px 0;
+    color: #f0f8ff;
+    text-align: center;
+}
+
+.about-hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.about-hero-section .lead {
+    font-size: 1.5rem;
+}
+
+/* Our Story Section */
+#our-story {
+    background-color: #f0f8ff; /* Alice Blue */
+    padding: 60px 0;
+}
+
+#our-story p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Our Team Section */
+#our-team {
+    padding: 60px 0;
+}
+
+#our-team img {
+    border: 4px solid #0e86da; /* Bright blue */
+}
+
+#our-team h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+#our-team p {
+    color: #055c9d; /* Medium blue */
+}
+
+/* Our Values Section */
+#our-values {
+    background-color: #f0f8ff; /* Alice Blue */
+    padding: 60px 0;
+}
+
+#our-values i {
+    color: #0e86da; /* Bright blue */
+}
+
+#our-values h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+#our-values p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Call to Action Section */
+#cta {
+    padding: 60px 0;
+}
+
+#cta .btn {
+    margin-top: 20px;
+}
+/* CEO Section */
+#ceo {
+    padding: 60px 0;
+}
+
+#ceo img {
+    border: 4px solid #0e86da; /* Bright blue */
+}
+
+#ceo h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+#ceo blockquote {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+#ceo .blockquote-footer {
+    font-size: 1rem;
+    color: #055c9d; /* Medium blue */
+}
+
+/* Our Values Section */
+#our-values i {
+    color: #0e86da; /* Bright blue */
+}
+
+#our-values h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+#our-values p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Alice Blue */
+    color: #003060; /* Dark blue */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #003060 !important; /* Dark blue */
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #f0f8ff !important; /* Alice Blue */
+    margin-right: auto; /* Push brand to the left */
+}
+
+.navbar-nav {
+    margin-left: auto; /* Push nav items to the right */
+}
+
+.nav-link {
+    color: #f0f8ff !important; /* Alice Blue */
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #68bbe3 !important; /* Light blue on hover */
+}
+
+.nav-link.active {
+    color: #0e86da !important; /* Bright blue for active link */
+    font-weight: bold;
+}
+
+/* Hero Section */
+.about-hero-section {
+    background: url('../images/about-hero.jpeg') no-repeat center center/cover;
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.about-hero-section h1 {
+    font-size: 2.5rem; /* Smaller font size for mobile */
+    font-weight: bold;
+}
+
+.about-hero-section .lead {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+}
+
+
+/* Responsive Font Sizes */
+@media (max-width: 768px) {
+    .about-hero-section h1 {
+        font-size: 2rem; /* Adjust for smaller screens */
+    }
+
+    .about-hero-section .lead {
+        font-size: 1rem; /* Adjust for smaller screens */
+    }
+
+    #our-mission h2, #ceo h3, #our-values h2, #cta h2 {
+        font-size: 1.8rem; /* Adjust headings for smaller screens */
+    }
+
+    #our-mission p, #ceo blockquote, #our-values p, #cta .lead {
+        font-size: 1rem; /* Adjust text for smaller screens */
+    }
+}
+
+/* CEO Section */
+#ceo {
+    padding: 60px 0;
+}
+
+#ceo img {
+    border: 4px solid #0e86da; /* Bright blue */
+}
+
+#ceo h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+#ceo blockquote {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+#ceo .blockquote-footer {
+    font-size: 1rem;
+    color: #055c9d; /* Medium blue */
+}
+
+/* Our Values Section */
+#our-values i {
+    color: #0e86da; /* Bright blue */
+}
+
+#our-values h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+#our-values p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Call to Action Section */
+#cta {
+    padding: 60px 0;
+}
+
+#cta .btn {
+    margin-top: 20px;
+}
