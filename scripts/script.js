@@ -15,11 +15,3 @@ window.addEventListener('load', function () {
     const spinner = document.getElementById('loading-spinner');
     spinner.style.display = 'none';
 });
-
-// Simulate a delay for testing
-window.addEventListener('load', function () {
-    setTimeout(function () {
-        const spinner = document.getElementById('loading-spinner');
-        spinner.style.display = 'none';
-    }, 9000); // 3-second delay for testing
-});
