@@ -6,6 +6,8 @@
     <title>Portfolio - Fenath Tech & Brands</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="styles/styles.css" rel="stylesheet">
     <link href="styles/animations.css" rel="stylesheet">
@@ -18,7 +20,6 @@
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="Fenath Tech and Brands Logo" width="130" height="40" class="d-inline-block align-top">
-                <!-- Fenath Tech and Brands -->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -40,91 +41,265 @@
     <section id="portfolio" class="py-5">
         <div class="container">
             <h1 class="text-center mb-5">Our Portfolio</h1>
+
+            <!-- Portfolio Filters -->
+            <div class="text-center mb-4">
+                <button class="btn btn-outline-primary active" data-filter="all">All</button>
+                <button class="btn btn-outline-primary" data-filter="branding">Branding</button>
+                <button class="btn btn-outline-primary" data-filter="web-design">Web Design</button>
+            </div>
+
+            <!-- Portfolio Grid -->
             <div class="row g-4">
+                <!-- Branding Category -->
                 <!-- Business Cards -->
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="images/business-card-1.jpg" alt="Business Card Design" class="img-fluid">
-                        <div class="overlay">
-                            <h3>Business Cards</h3>
-                            <p>Unique and professional designs for your brand.</p>
-                        </div>
+                <div class="col-md-4 portfolio-item" data-category="branding">
+                    <a href="gallary/business-card-1.jpg" data-lightbox="portfolio" data-title="Business Card Design">
+                        <img src="gallary/business-card-1.jpg" alt="Business Card Design" class="img-fluid">
+                    </a>
+                    <div class="overlay">
+                        <h3>Business Card</h3>
+                        <p>Unique and professional designs.</p>
                     </div>
                 </div>
+
                 <!-- Banners (Landscape) -->
-                <div class="col-md-8">
-                    <div class="portfolio-item">
-                        <img src="images/banner-landscape-1.jpg" alt="Landscape Banner Design" class="img-fluid">
-                        <div class="overlay">
-                            <h3>Landscape Banners</h3>
-                            <p>Eye-catching designs for events and promotions.</p>
-                        </div>
+                <div class="col-md-8 portfolio-item" data-category="branding">
+                    <a href="images/banner-landscape-1.png" data-lightbox="portfolio" data-title="Landscape Banner Design">
+                        <img src="images/banner-landscape-1.png" alt="Landscape Banner Design" class="img-fluid">
+                    </a>
+                    <div class="overlay">
+                        <h3>Landscape Banners</h3>
+                        <p>Eye-catching designs for promotions.</p>
                     </div>
                 </div>
+
                 <!-- Banners (Portrait) -->
-                <div class="col-md-4">
-                    <div class="portfolio-item">
+                <!-- <div class="col-md-4 portfolio-item" data-category="branding">
+                    <a href="images/banner-portrait-1.jpg" data-lightbox="portfolio" data-title="Portrait Banner Design">
                         <img src="images/banner-portrait-1.jpg" alt="Portrait Banner Design" class="img-fluid">
-                        <div class="overlay">
-                            <h3>Portrait Banners</h3>
-                            <p>Vertical designs for impactful visuals.</p>
-                        </div>
+                    </a>
+                    <div class="overlay">
+                        <h3>Portrait Banners</h3>
+                        <p>Vertical designs for impactful visuals.</p>
                     </div>
-                </div>
+                </div> -->
+
                 <!-- Flyers -->
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="images/flyer-1.jpg" alt="Flyer Design" class="img-fluid">
-                        <div class="overlay">
-                            <h3>Flyers</h3>
-                            <p>Creative and informative designs for your campaigns.</p>
-                        </div>
+                <div class="col-md-4 portfolio-item" data-category="branding">
+                    <a href="gallary/flyer-1.png" data-lightbox="portfolio" data-title="Flyer Design">
+                        <img src="gallary/flyer-1.png" alt="Flyer Design" class="img-fluid">
+                    </a>
+                    <div class="overlay">
+                        <h3>Flyers</h3>
+                        <p>Creative and informative designs for your campaigns.</p>
                     </div>
                 </div>
+
                 <!-- Invitation Cards -->
-                <div class="col-md-4">
-                    <div class="portfolio-item">
+                <!-- <div class="col-md-4 portfolio-item" data-category="branding">
+                    <a href="images/invitation-card-1.jpg" data-lightbox="portfolio" data-title="Invitation Card Design">
                         <img src="images/invitation-card-1.jpg" alt="Invitation Card Design" class="img-fluid">
-                        <div class="overlay">
-                            <h3>Invitation Cards</h3>
-                            <p>Elegant designs for your special events.</p>
-                        </div>
+                    </a>
+                    <div class="overlay">
+                        <h3>Invitation Cards</h3>
+                        <p>Elegant designs for your special events.</p>
+                    </div>
+                </div> -->
+
+                <!-- Brochures -->
+                <div class="col-md-8 portfolio-item" data-category="branding">
+                    <a href="images/brochure-1.png" data-lightbox="portfolio" data-title="Brochure Design">
+                        <img src="images/brochure-1.png" alt="Brochure Design" class="img-fluid">
+                    </a>
+                    <div class="overlay">
+                        <h3>Brochures</h3>
+                        <p>Detailed and visually appealing designs for your business.</p>
                     </div>
                 </div>
-                <!-- Brochures -->
-                <div class="col-md-8">
-                    <div class="portfolio-item">
-                        <img src="images/brochure-1.jpg" alt="Brochure Design" class="img-fluid">
-                        <div class="overlay">
-                            <h3>Brochures</h3>
-                            <p>Detailed and visually appealing designs for your business.</p>
-                        </div>
+
+                <!-- Logo Design 1 -->
+                <div class="col-md-4 portfolio-item" data-category="branding">
+                    <a href="gallary/logo-design-1.png" data-lightbox="portfolio" data-title="Logo Design 1">
+                        <img src="gallary/logo-design-1.png" alt="Logo Design 1" class="img-fluid">
+                    </a>
+                    <div class="overlay">
+                        <h3>Logo Design</h3>
+                        <p>Unique and professional logo design.</p>
+                    </div>
+                </div>
+
+                <!-- Logo Design 2 -->
+                <!-- <div class="col-md-4 portfolio-item" data-category="branding">
+                    <a href="gallary/logo-design-2.png" data-lightbox="portfolio" data-title="Logo Design 2">
+                        <img src="gallary/logo-design-2.png" alt="Logo Design 2" class="img-fluid">
+                    </a>
+                    <div class="overlay">
+                        <h3>Logo Design </h3>
+                        <p>Creative and modern logo design.</p>
+                    </div>
+                </div> -->
+
+                <!-- Signage -->
+                <div class="col-md-4 portfolio-item" data-category="branding">
+                    <a href="gallary/Cap.png" data-lightbox="portfolio" data-title="Signage Design">
+                        <img src="gallary/Cap.png" alt="Signage Design" class="img-fluid">
+                    </a>
+                    <div class="overlay">
+                        <h3>Cap Design</h3>
+                        <p>Custom cap designs for branding.</p>
+                    </div>
+                </div>
+
+                <!-- T-Shirt Design -->
+                <div class="col-md-4 portfolio-item" data-category="branding">
+                    <a href="gallary/tshirt-design-1.png" data-lightbox="portfolio" data-title="T-Shirt Design">
+                        <img src="gallary/tshirt-design-1.png" alt="T-Shirt Design" class="img-fluid">
+                    </a>
+                    <div class="overlay">
+                        <h3>T-Shirt Design</h3>
+                        <p>Custom T-shirt designs for branding.</p>
+                    </div>
+                </div>
+
+                <!-- Web Design Category -->
+                <!-- Web Design Landscape 1 -->
+                <div class="col-md-8 portfolio-item" data-category="web-design">
+                    <a href="gallary/web-landscape-1.jpg" data-lightbox="portfolio" data-title="Web Design Landscape 1">
+                        <img src="gallary/web-landscape-1.jpg" alt="Web Design Landscape 1" class="img-fluid">
+                    </a>
+                    <div class="overlay">
+                        <h3>Web Design Landscape 1</h3>
+                        <p>Responsive and modern website design.</p>
+                    </div>
+                </div>
+
+                <!-- Web Design Landscape 2 -->
+                <div class="col-md-4 portfolio-item" data-category="web-design">
+                    <a href="gallary/web-landscape-2.png" data-lightbox="portfolio" data-title="Web Design Landscape 2">
+                        <img src="gallary/web-landscape-2.png" alt="Web Design Landscape 2" class="img-fluid">
+                    </a>
+                    <div class="overlay">
+                        <h3>Web Design Landscape 2</h3>
+                        <p>Creative and user-friendly web design.</p>
+                    </div>
+                </div>
+
+                <!-- Web Design Landscape 3 -->
+                <div class="col-md-4 portfolio-item" data-category="web-design">
+                    <a href="gallary/web-landscape-3.jpg" data-lightbox="portfolio" data-title="Web Design Landscape 3">
+                        <img src="gallary/web-landscape-3.jpg" alt="Web Design Landscape 3" class="img-fluid">
+                    </a>
+                    <div class="overlay">
+                        <h3>School Managemennt Software</h3>
+                        <p>E-Result page from our School Managemennt Software</p>
+                    </div>
+                </div>
+
+                <!-- Web Design Landscape 4 -->
+                <div class="col-md-4 portfolio-item" data-category="web-design">
+                    <a href="gallary/web-landscape-4.jpg" data-lightbox="portfolio" data-title="Web Design Landscape 4">
+                        <img src="gallary/web-landscape-4.jpg" alt="Web Design Landscape 4" class="img-fluid">
+                    </a>
+                    <div class="overlay">
+                        <h3>School Managemennt Software</h3>
+                        <p>About and Dashboard page from our School Managemennt Software</p>
+                    </div>
+                </div>
+
+                <!-- Web Design Portrait 1 -->
+                <div class="col-md-4 portfolio-item" data-category="web-design">
+                    <a href="gallary/web-portrait-1.jpg" data-lightbox="portfolio" data-title="Web Design Portrait 1">
+                        <img src="gallary/web-portrait-1.jpg" alt="Web Design Portrait 1" class="img-fluid">
+                    </a>
+                    <div class="overlay">
+                        <h3>School Managemennt Software</h3>
+                        <p>Result checking page from our School Managemennt Software</p>
+                    </div>
+                </div>
+
+                <!-- Web Design Portrait 2 -->
+                <div class="col-md-4 portfolio-item" data-category="web-design">
+                    <a href="gallary/web-portrait-2.jpg" data-lightbox="portfolio" data-title="Web Design Portrait 2">
+                        <img src="gallary/web-portrait-2.jpg" alt="Web Design Portrait 2" class="img-fluid">
+                    </a>
+                    <div class="overlay">
+                        <h3>School Managemennt Software</h3>
+                        <p>Login Page</p>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <!-- See More Button -->
+            <!-- <div class="text-center mt-4">
+                <button id="see-more-btn" class="btn btn-primary">See More</button>
+            </div>
+        </div> -->
     </section>
 
+    <!-- Contact Us Button -->
     <center>
         <a href="contact.html" class="btn btn-info btn-lg">Contact us Now</a>
     </center>
-        
 <br>
 <br>
+
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
         <div class="container">
             <p>&copy; 2025 Fenath Tech and Brands. All rights reserved.</p>
         </div>
     </footer>
+
     <!-- Loading Spinner -->
-<div id="loading-spinner" class="spinner-container">
-    <div class="spinner"></div>
-</div>
+    <!-- <div id="loading-spinner" class="spinner-container">
+        <div class="spinner"></div>
+    </div> -->
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <!-- Custom JS -->
     <script src="scripts/script.js"></script>
+
+    <script>
+        // Portfolio Filtering
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.btn[data-filter]');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to the clicked button
+                    this.classList.add('active');
+
+                    const filter = this.getAttribute('data-filter');
+
+                    // Show/hide portfolio items based on the filter
+                    portfolioItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // See More Button
+            const seeMoreBtn = document.getElementById('see-more-btn');
+            const hiddenItems = document.querySelectorAll('.portfolio-item.hidden');
+
+            seeMoreBtn.addEventListener('click', function () {
+                hiddenItems.forEach(item => {
+                    item.classList.remove('hidden');
+                });
+                seeMoreBtn.style.display = 'none'; // Hide the button after showing all items
+            });
+        });
+    </script>
 </body>
 </html>
