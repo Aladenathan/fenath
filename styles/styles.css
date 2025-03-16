@@ -40,7 +40,10 @@ body {
 }
 
 /* Hero Section */
-
+.display-4{
+    font-weight: bold;
+    color: #003060;
+}
 .hero-section {
     color: #055c9d; /* Alice Blue for text */
     padding: 100px 0;
