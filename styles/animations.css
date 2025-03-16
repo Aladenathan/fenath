@@ -33,6 +33,23 @@
     opacity: 1;
 }
 
+
+/* Spin Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Apply spin animation on page load */
+.spin-on-load {
+    animation: spin 2s ease-in-out; /* Spin once on page load */
+}
+
+/* Apply spin animation on hover (desktop) or touch (mobile) */
+.spin-on-touch:hover, .spin-on-touch:active {
+    animation: spin 2s ease-in-out; /* Spin on hover or touch */
+}
+
 /* Fade-in Animation for Portfolio Items */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
@@ -42,9 +59,6 @@
 .portfolio-item {
     animation: fadeIn 0.5s ease-out;
 }
-
-
-
 
 
 /* Fade-in Animation for About page*/
