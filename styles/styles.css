@@ -65,11 +65,16 @@ body {
     border-radius: 20px; /* Optional: Add rounded corners */
 }
 
-
+/* .phone-image {
+    background: url('../images/phone-portrait.png') no-repeat center center/cover; 
+    height: 500px;
+    width: 500px;
+    border-radius: 20px;
+} */
 
 /* Featured Section Styles */
 #featured {
-    padding: 40px 0;
+    padding: 10px 0;
     color: #0e86da; /* Alice Blue for text */
 }
 
@@ -81,6 +86,7 @@ body {
 }
 
 #featured .lead {
+    color:#000 ;
     font-size: 1.25rem;
     line-height: 1.6;
 }
@@ -146,6 +152,12 @@ body {
 /* Mobile View */
 @media screen and (max-width: 768px) {
     /* Hero Section */
+
+    .hero-section {
+        padding-top: 100px;
+        padding-bottom: 0;
+    }
+ 
     .service-card, .software-card {
         margin: 10px 0;
     }
@@ -163,11 +175,11 @@ body {
     }
 
     .hero-section h1 {
-        font-size: 1.2rem; /* Adjust heading size for smaller screens */
+        font-size: 1rem; /* Adjust heading size for smaller screens */
     }
 
     .hero-section .lead {
-        font-size: 0.8rem; /* Adjust text size for smaller screens */
+        font-size: 0.7rem; /* Adjust text size for smaller screens */
     }
     .phone-image img {
         height: auto; /* Ensure the image scales properly */
