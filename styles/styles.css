@@ -39,15 +39,34 @@ body {
     background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
 }
 
+/* Navbar Theme Toggle Styles */
+.check{
+    margin-top: 9px;
+}
+.form-check-input:checked {
+    background-color: #0e86da;
+    border-color: #0e86da;
+  }
+  
+  .form-check-label {
+    color: #fff0f0;
+    margin-left: 5px;
+  }
+  
+  .dark-theme .form-check-label {
+    color: #f0f8ff;
+  }
 /* Hero Section */
 .display-4{
     font-weight: bold;
     color: #003060;
+
 }
 .hero-section {
+    margin-top: 2%;
     color: #055c9d; /* Alice Blue for text */
     padding: 100px 0;
-    background-color: #f0f8ff;  /*Alice Blue  */
+    /* background-color: #f0f8ff; */
 }
 
 .hero-section .row {
@@ -80,14 +99,16 @@ body {
 
 #featured h1 {
     color: #003060; /* Dark blue for text */
-    font-size: 1rem;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
 #featured .lead {
-    color:#000 ;
-    font-size: 0.8rem;
+    text-align: justify;
+    hyphens: auto;
+    color:#003060 ;
+    font-size: 1.1rem;
     line-height: 1.6;
 }
 
@@ -100,7 +121,7 @@ body {
     color: #003060; /* Dark blue for text */
 }
 
-.service-card:hover, .software-card:hover {
+.service-card:hover, .software-card:hover{
     transform: translateY(-10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
@@ -131,6 +152,16 @@ body {
 .image-grid-section img {
     border-radius: 10px;
 }
+.service-card a, #management-software a{
+    text-decoration: none;     /* Remove underline */
+  color: #fff;               /* Change text color */
+  background-color: #003060; 
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+
+}
 
 /* Contact Form Section */
 .social-icons a {
@@ -149,12 +180,93 @@ body {
     color: #003060; /* Dark blue */
 }
 
+/* Popup Ad Styles */
+#adPopup .modal-content {
+    background: transparent;
+    border: none;
+  }
+  
+  #adPopup .btn-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  #adPopup .btn-close:hover {
+    background: rgba(0,0,0,0.8);
+  }
+  
+  #adPopup img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  #adPopup img:hover {
+    transform: scale(1.02);
+  }
+
+
+
+/* Ad Banner Styles */
+.ad-banner-section {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .ad-banner-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .ad-banner-track {
+    display: flex;
+    width: 200%; /* Double width for 2 ads (duplicated) */
+    animation: scrollBanner 20s linear infinite;
+  }
+  
+  .ad-banner-item {
+    flex: 0 0 50%; /* Each ad takes half (for 2 ads) */
+    width: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .ad-banner-item:hover {
+    transform: scale(1.01);
+  }
+  
+  .ad-banner-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  @keyframes scrollBanner {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); /* Move by half (for 2 ads) */
+    }
+  }
+  
+  /* Pause animation on hover */
+  .ad-banner-container:hover .ad-banner-track {
+    animation-play-state: paused;
+  }
+
+
+
 /* Mobile View */
 @media screen and (max-width: 768px) {
     /* Hero Section */
 
     .hero-section {
-        padding-top: 100px;
+        padding-top: 50px;
         padding-bottom: 0;
     }
  
@@ -523,3 +635,115 @@ body {
 #cta .btn {
     margin-top: 20px;
 }
+
+
+
+
+
+/* Banner Styles */
+.hero-banner {
+    margin-top: 56px; /* Account for fixed navbar */
+}
+
+.feature-banner {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+}
+
+.feature-banner img {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.demo-banner {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.testimonial-banner {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.bg-gradient-cta {
+    background: linear-gradient(135deg, #055c9d 0%, #003060 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-banner {
+        margin-top: 66px;
+    }
+    
+    .feature-banner, .demo-banner, .testimonial-banner {
+        margin-left: -15px;
+        margin-right: -15px;
+        border-radius: 0;
+    }
+}
+
+
+
+/* Dark Theme Styles */
+body.dark-theme {
+    background-color: #121212;
+    color: #5c5d64;
+  }
+  
+  .dark-theme .navbar {
+    background-color: #1a1a1a !important;
+  }
+  
+  .dark-theme .service-card,
+  .dark-theme .software-card {
+    background-color: #2d2d2d;
+    color: #f0f8ff;
+  }
+  
+  .dark-theme #branding-services,
+  .dark-theme #management-software {
+    background-color: #1e1e1e;
+  }
+  .dark-theme #portfolio  {
+    background: rgba(30, 30, 30, 0.9);
+  }
+  .dark-theme .portfolio-item .overlay {
+    background: rgba(30, 30, 30, 0.9);
+  }
+  
+  .dark-theme footer {
+    background-color: #1a1a1a !important;
+  }
+  
+  .dark-theme .modal-content {
+    background-color: #2d2d2d;
+    color: #f0f8ff;
+  }
+  
+  .dark-theme .card {
+    background-color: #2d2d2d;
+    color: #f0f8ff;
+  }
+  
+  .dark-theme .list-group-item {
+    background-color: #2d2d2d;
+    color: #f0f8ff;
+    border-color: #3d3d3d;
+  }
+  
+  .dark-theme .alert-light {
+    background-color: #3d3d3d;
+    color: #f0f8ff;
+    border-color: #4d4d4d;
+  }
+  .dark-theme #featured .lead{
+    color: aliceblue;
+  }
+  .dark-theme .sms{
+    color: aliceblue;
+  }
+  .dark-theme .dk-list, .dk-sys{
+    color: #000;
+  }
+  /* Add more dark theme styles as needed for other elements */
